@@ -16,3 +16,6 @@ Step 3:- Installing Argo Rollouts controller on our Kubernetes Cluster
  - Enter "kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml" to install Argo Rollouts
 
 
+Step 4:- Dockerizing the Application
+ - Creating a .dockerfile to isolate the source code
+ - 
