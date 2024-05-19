@@ -4,6 +4,7 @@
 <h2>Task 1</h2>
 Step 1:- Creating a Git repository that hosts our code
  - includes an index.js file for web application
+
  - includes a kubeconfig file for managing cluster
 
 Step 2:- Installing Argo CD on our Kubernetes Cluster
