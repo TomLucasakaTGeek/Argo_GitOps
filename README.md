@@ -18,4 +18,5 @@ Step 3:- Installing Argo Rollouts controller on our Kubernetes Cluster
 
 Step 4:- Dockerizing the Application
  - Creating a .dockerfile to isolate the source code
- - 
+ - Enter "docker build -t <name>/<reponame>:<tag>" to build a docker image
+ - Enter "docker push  <name>/<reponame>:<tag>" to push the docker image to docker hub[public container registry]
