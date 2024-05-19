@@ -7,7 +7,7 @@ Step 1:- Creating a Git repository that hosts our code
  - includes a kubeconfig file for managing cluster
 
 Step 2:- Installing Argo CD on our Kubernetes Cluster
- - Enter "minikube start" command to start the kubernetes cluster
+ - Enter "minikube start" command to start the kubernetes cluster 
  - Enter "kubectl create namespace argocd" to add a namespace "argocd"
  - Enter "kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml" to install Argo CD 
 
