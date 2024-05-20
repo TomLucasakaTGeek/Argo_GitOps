@@ -23,4 +23,22 @@ Step 4:- Dockerizing the Application
 
 Step 5:- Deploying the application
  - Modifying kubeconfig file (./kube/config.yaml) to use the docker image previously pushed 
- - 
+ - Enter "kubectl get pods -n argocd" to verify the activeness of Argo CD
+ - Enter "argocd login {argocd-server-url} --sso --skip-test-tls --grpc-web" to login to the ArgoCD UI
+ - Link your repository containing the source code and container to Argo CD using the web GUI, to start the continous deployment
+
+Step 6:- Defining a rollout strategy
+ - Define a Rollout resource (equivalent to a Deployment) in your project’s Kubernetes manifests.
+ - Specify the canary strategy in the rollout definition.
+ - Set the initial canary weight (e.g., 10%), pause for a specified duration (e.g., 1 hour) to monitor behavior, gradually increase the canary weight (e.g., 20%).
+ 
+Step 7:- Implementing the Canary Release strategy with Argo CD
+ - Commit your updated Kubernetes manifests to your GitHub repository.
+ - Build your project code into a Docker image and push the image to Docker Hub.
+ - Modify the rollout definition to use the new image.
+ - Use ArgoCD to sync your application with the updated manifests.
+
+Step 8:- Monitoring the release and changes 
+ - ArgoCD will manage the rollout process based on the canary strategy.
+ - Observe the behavior of the canary version.
+ - Verify that the canary behaves as expected.
