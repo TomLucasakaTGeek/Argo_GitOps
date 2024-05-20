@@ -22,4 +22,5 @@ Step 4:- Dockerizing the Application
  - Enter "docker push {username}/{reponame}:{tag}" to push the docker image to docker hub[public container registry]
 
 Step 5:- Deploying the application
- -  Modifying kubeconfig file (./kube/config.yaml) to use the docker image previously pushed 
+ - Modifying kubeconfig file (./kube/config.yaml) to use the docker image previously pushed 
+ - 
