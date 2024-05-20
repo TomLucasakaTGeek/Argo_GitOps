@@ -4,7 +4,8 @@
 
 Step 1:- Creating a Git repository that hosts our code
  - includes an index.js file for web application
- - includes a kubeconfig file for managing cluster
+ - includes a kubeconfig file (./kube/config.yaml) for managing cluster
+ - includes a Dockerfile for container image
 
 Step 2:- Installing Argo CD on our Kubernetes Cluster
  - Enter "minikube start" command to start the kubernetes cluster 
@@ -21,4 +22,4 @@ Step 4:- Dockerizing the Application
  - Enter "docker push {username}/{reponame}:{tag}" to push the docker image to docker hub[public container registry]
 
 Step 5:- Deploying the application
- -  
+ -  Modifying kubeconfig file (./kube/config.yaml) to use the docker image previously pushed 
