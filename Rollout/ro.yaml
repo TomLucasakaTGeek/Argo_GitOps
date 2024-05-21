@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata: 
+  name: devops-ro
+  namespace: express-ns
+spec: 
+  template:
+    metadata: 
+      labels: 
+        app: expressapp
+      spec: 
+        containers:
+        - name: expressapp
+        - image: tanmaykhannasdocker/devops
+  selectors:
+    matchLabels: 
+      app: expressapp
+  replicas: 5
+  strategy: 
+    canary: 
+      steps: 
+      - setweight: 10
+      - pause: {}
