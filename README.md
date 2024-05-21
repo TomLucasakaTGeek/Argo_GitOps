@@ -22,7 +22,7 @@
 
 ### Our Repo structure is given below:- 
 
-> DevOps_Assignment
+> DevOps-Assignment
 |_ Source
 |  |_ Dockerfile
 |  |_ .dockerignore
@@ -38,6 +38,7 @@
 |  |_ config.yaml
 |
 |_ README.md
+
 ---
 
 ### Step 1:- Creating a Git repository that hosts our code
@@ -57,31 +58,31 @@
 ### Step 2:- Installing Argo tools on our Kubernetes Cluster
 > Note:- The **Docker Desktop** should be up and running from here until you are monitoring the deployment and changes.
 - Command to run your Kubernetes cluster 
-```
+   ```
 	minikube start
-```
+   ```
 - If faced with any confusion, refer to the original documentation of Kuberentes:- [Learn Kubernetes Basics | Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/)	
 
 - Commands to install Argo CD to your cluster 
-```
+   ```
 	kubectl create namespace argocd
 	kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml 
-```
+   ```
 - Commands to install Argo Rollout to your cluster 
-```
+   ```
 	kubectl create namespace argo-rollouts
 	kubectl apply -n argocd -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml 
-```
+   ```
 
 ### Step 3:- Dockerizing the Application
 
 - Creating a *Dockerfile* to isolate the source code, and a *.dockerignore* file to hide the unnecessary modules from the container.
 [docker commands rest in: Source -> Dockerfile] 
 - Run the build command and push command to push the docker image to docker hub.
-```
+   ```
 	docker build -t {username}/{reponame}:{tag}
 	docker push {username}/{reponame}:{tag}
-```
+   ```
 - If faced with any confusion, refer to the original documentation of Docker:- [Packaging your software | Docker Docs](https://docs.docker.com/build/building/packaging/) 
 
 
@@ -90,14 +91,12 @@
 - Modify **Kubernetes manifests** or *kubeconfig file (./kube/config.yaml)* to use the docker image previously pushed. 
 
 - Login to Argo CD using:-
-```
-	kubectl get all -n argocd       
-	#identfy the port for Argo CD 
-	kubectl port-forward service/argocd-server -n argocd 8080:443  
-	#runs the Argo Web GUI on 127.0.0.1:8080
-```
+  ```
+	kubectl get all -n argocd                                        #identfy the port for Argo CD 
+	kubectl port-forward service/argocd-server -n argocd 8080:443    #runs the Argo Web GUI on 127.0.0.1:8080
+  ```
 - Login Page looks like this:
-![image](https://www.unixarena.com/wp-content/uploads/2021/07/Argo-CD-Login-Page.jpg)
+ ![image](https://www.unixarena.com/wp-content/uploads/2021/07/Argo-CD-Login-Page.jpg)
 - Default username is **"admin"**  and to get the password run the command :
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password} | base64 -d
