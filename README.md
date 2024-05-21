@@ -21,24 +21,24 @@
 ---
 
 ### Our Repo structure is given below:- 
-
-> DevOps-Assignment
-|_ Source
-|  |_ Dockerfile
-|  |_ .dockerignore
-|  |_ index.js
-|  |_ .gitignore
-|  |_ package.json
-|
-|_ Rollout
-|  |_ svc.yaml
-|  |_ ro.yaml
-|
-|_ .kube
-|  |_ config.yaml
-|
-|_ README.md
-
+```
+ DevOps-Assignment
+ |_ Source
+ |  |_ Dockerfile
+ |  |_ .dockerignore
+ |  |_ index.js
+ |  |_ .gitignore
+ |  |_ package.json
+ |
+ |_ Rollout
+ |  |_ svc.yaml
+ |  |_ ro.yaml
+ |
+ |_ .kube
+ |  |_ config.yaml
+ |
+ |_ README.md
+```
 ---
 
 ### Step 1:- Creating a Git repository that hosts our code
