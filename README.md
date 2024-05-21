@@ -9,7 +9,6 @@ Prerequisites:-
  - Basics of GitOps tools like Argo CD and Argo Rollouts
 
 --
-
 Step 1:- Creating a Git repository that hosts our code
  - includes a Source directory for web application.
  - includes a kubeconfig file (./kube/config.yaml) for managing cluster.
