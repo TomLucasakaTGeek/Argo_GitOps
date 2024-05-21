@@ -3,9 +3,8 @@
 <h2>Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.<h2>  
 
 Step 1:- Creating a Git repository that hosts our code
- - includes an index.js file for web application.
+ - includes a Source-Code directory for web application.
  - includes a kubeconfig file (./kube/config.yaml) for managing cluster.
- - includes a Dockerfile for container image.
 
 Step 2:- Installing Argo CD on our Kubernetes Cluster
  - Enter "minikube start" command to start the kubernetes cluster. 
@@ -17,7 +16,7 @@ Step 3:- Installing Argo Rollouts controller on our Kubernetes Cluster
  - Enter "kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml" to install Argo Rollouts.
 
 Step 4:- Dockerizing the Application
- - Creating a .dockerfile to isolate the source code.
+ - Creating a Dockerfile to isolate the source code.
  - Enter "docker build -t {username}/{reponame}:{tag}" to build a docker image.
  - Enter "docker push {username}/{reponame}:{tag}" to push the docker image to docker hub[public container registry].
 
