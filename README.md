@@ -22,9 +22,9 @@ Step 4:- Dockerizing the Application
 
 Step 5:- Deploying the application
  - Modifying kubeconfig file (./kube/config.yaml) to use the docker image previously pushed. 
- - Enter "kubectl get pods -n argocd" to verify the activeness of Argo CD.
- - Enter "argocd login {argocd-server-url} --sso --skip-test-tls --grpc-web" to login to the ArgoCD UI.
- - Link your repository containing the source code and container to Argo CD using the web GUI, to start the continous deployment.
+ - Enter "kubectl get all -n argocd" to identify the port of Argo CD.
+ - Enter "kubectl port-forward service/argocd-server -n argocd 8080:443" to login to the ArgoCD web GUI.
+ - 
 
 Step 6:- Defining a rollout strategy
  - Define a Rollout resource (equivalent to a Deployment) in your project’s Kubernetes manifests.
