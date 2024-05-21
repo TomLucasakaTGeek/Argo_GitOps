@@ -3,7 +3,7 @@
 <h2>Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.<h2>  
 
 Step 1:- Creating a Git repository that hosts our code
- - includes a Source-Code directory for web application.
+ - includes a Source directory for web application.
  - includes a kubeconfig file (./kube/config.yaml) for managing cluster.
 
 Step 2:- Installing Argo CD on our Kubernetes Cluster
