@@ -1,6 +1,14 @@
-<h1>Documentation of Codebase</h1>
+#Documentation of Codebase
 
-<h2>Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.<h2>  
+##Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.  
+
+Prerequisites:- 
+ - Experience with Git commands and GitHub platform.
+ - Containerization using Docker and a container registry like Docker Hub.
+ - Familiarity with Kuberentes Concepts like - Pods, Services, Deployments and Clusters.
+ - Basics of GitOps tools like Argo CD and Argo Rollouts
+
+--
 
 Step 1:- Creating a Git repository that hosts our code
  - includes a Source directory for web application.
@@ -27,7 +35,7 @@ Step 5:- Deploying the application
  - Press create app button and specify your app hosted on the github. 
 
 Step 6:- Defining a rollout strategy
- - Define a Rollout resource (equivalent to a Deployment) in your project’s Kubernetes manifests.
+ - Define a Rollout resource (equivalent to a Deployment) in your project’s Kubernetes manifests under Rollout directory.
  - Specify the canary strategy in the rollout definition.
  - Set the initial canary weight (e.g., 10%), pause for a specified duration (e.g., 1 hour) to monitor behavior, gradually increase the canary weight (e.g., 20%).
  
