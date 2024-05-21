@@ -1,6 +1,6 @@
-#Documentation of Codebase
+# Documentation of Codebase
 
-##Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.  
+## Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.  
 
 Prerequisites:- 
  - Experience with Git commands and GitHub platform.
