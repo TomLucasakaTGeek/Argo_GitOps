@@ -2,13 +2,13 @@
 
 ## Project Topic:- Dockerizing a simple web application, deploy it to a Kubernetes cluster using Argo CD, and manage its release process with Argo Rollouts.  
 
-Prerequisites:- 
+### Prerequisites:- 
  - Experience with Git commands and GitHub platform.
  - Containerization using Docker and a container registry like Docker Hub.
  - Familiarity with Kuberentes Concepts like - Pods, Services, Deployments and Clusters.
  - Basics of GitOps tools like Argo CD and Argo Rollouts
 
---
+---
 Step 1:- Creating a Git repository that hosts our code
  - includes a Source directory for web application.
  - includes a kubeconfig file (./kube/config.yaml) for managing cluster.
