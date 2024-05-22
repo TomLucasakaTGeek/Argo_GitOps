@@ -134,15 +134,37 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - Observe the behavior of the canary version.
 
 - Verify that the canary behaves as expected.
-
+ 
 ---
+
+### Cleanup of Kubernetes Cluster:-
+
+- Delete the Argo Rollouts using the following command:
+	```
+	kubectl delete rollouts {rollout-name}
+	```
+- Delete the Argo CD application using the argocd CLI:
+	```
+	argocd app delete {app-name}
+	```
+- Delete the Kubernetes Deployment using the following command:
+	```
+	kubectl delete deployment my-deployment
+	```
+- Delete the Docker Image from the Docker Hub using the Docker Hub UI or the Docker CLI. Please refer to the Docker Hub documentation for the specific steps:- [Overview of Docker Hub | Docker Docs](https://docs.docker.com/docker-hub/).
+
+- Delete the Kubernetes Cluster using the following command:
+	```
+	minikube delete
+	```
+---
+
 ### Challenges and Solutions:- 
 - Docker is more than just images. Its a containerization tool where our code is isolated and managed. To understand the docker well, we can refer to this video for simplified but quick explanation:- https://youtu.be/gAkwW2tuIqE?feature=shared
 - Kubernetes is not difficult but learning Kubernetes is rather a long process, the documentation is enough:-  [Learn Kubernetes Basics | Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 - I personally felt that Argo CD and Argo Rollouts is rather difficult to understand through documentation and some of the commands are not explicitly mentioned.
 - This led me into an infinite confusions of deployments to containers and trying to install the CLI, which is not straightforward for Windows users(like me), and so I referred to this youtube video :- https://youtu.be/JLrR9RV9AFA?feature=shared
 - By no chance I am saying their documentation is bad but GitOps intersects so many concepts together, which is not elaborated in the documentation, thus not very beginner-friendly.
-
 ---
 
 ### THANK YOU FOR ASSIGNING THIS PROJECT TO ME, AS I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECTS.
