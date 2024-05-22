@@ -80,8 +80,8 @@
 [docker commands rest in: Source -> Dockerfile] 
 - Run the build command and push command to push the docker image to docker hub.
    ```
-	docker build -t {username}/{reponame}:{tag}             #build command
-	docker push {username}/{reponame}:{tag}			#push command
+	docker build -t {username}/{reponame}:{tag}                      #build command
+	docker push {username}/{reponame}:{tag}			         #push command
    ```
 - If faced with any confusion, refer to the original documentation of Docker:- [Packaging your software | Docker Docs](https://docs.docker.com/build/building/packaging/) 
 
