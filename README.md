@@ -21,24 +21,24 @@
 ---
 
 ### Our Repo structure is given below:- 
-
-> DevOps-Assignment
-|_ Source
-|  |_ Dockerfile
-|  |_ .dockerignore
-|  |_ index.js
-|  |_ .gitignore
-|  |_ package.json
-|
-|_ Rollout
-|  |_ svc.yaml
-|  |_ ro.yaml
-|
-|_ .kube
-|  |_ config.yaml
-|
-|_ README.md
-
+```
+ DevOps-Assignment
+ |_ Source
+ |  |_ Dockerfile
+ |  |_ .dockerignore
+ |  |_ index.js
+ |  |_ .gitignore
+ |  |_ package.json
+ |
+ |_ Rollout
+ |  |_ svc.yaml
+ |  |_ ro.yaml
+ |
+ |_ .kube
+ |  |_ config.yaml
+ |
+ |_ README.md
+```
 ---
 
 ### Step 1:- Creating a Git repository that hosts our code
@@ -169,4 +169,4 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### THANK YOU FOR ASSIGNING THIS PROJECT TO ME, AS I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECTS.
 
-### LOOKING FORWARD TO WORKING WITH YOUR TEAM.
+### LOOKING FORWARD TO WORKING WITH YOUR TEAM😊.
