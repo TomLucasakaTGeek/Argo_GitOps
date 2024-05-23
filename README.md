@@ -149,7 +149,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 	```
 - Delete the Kubernetes Deployment using the following command:
 	```
-	kubectl delete deployment my-deployment
+	kubectl delete deployment {deployment-name}
 	```
 - Delete the Docker Image from the Docker Hub using the Docker Hub UI or the Docker CLI. Please refer to the Docker Hub documentation for the specific steps:- [Overview of Docker Hub | Docker Docs](https://docs.docker.com/docker-hub/).
 
