@@ -99,7 +99,7 @@
  ![image](https://www.unixarena.com/wp-content/uploads/2021/07/Argo-CD-Login-Page.jpg)
 - Default username is **"admin"**  and to get the password run the command :
 ```
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password} | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 - It will open up such an interface
  ![(4-argo-app-created.png (1920×1012) (arthurkoziel.com)](https://www.arthurkoziel.com/setting-up-argocd-with-helm/4-argo-app-created.png)
