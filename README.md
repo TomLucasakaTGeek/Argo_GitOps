@@ -92,16 +92,16 @@
 
 - Login to Argo CD using:-
   ```
-	kubectl get all -n argocd                                        #identfy the port for Argo CD 
+	kubectl get all -n argocd                                        #identify the port for Argo CD 
 	kubectl port-forward service/argocd-server -n argocd 8080:443    #runs the Argo Web GUI on 127.0.0.1:8080
   ```
 - Login Page looks like this:
  ![image](https://www.unixarena.com/wp-content/uploads/2021/07/Argo-CD-Login-Page.jpg)
-- Default username is **"admin"**  and to get the password run the command :
+- Default username is **"admin"**  and to get the password run the following command :
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
-- It will open up such an interface
+- It will open up such an interface:
  ![(4-argo-app-created.png (1920×1012) (arthurkoziel.com)](https://www.arthurkoziel.com/setting-up-argocd-with-helm/4-argo-app-created.png)
 - Press ```+ NEW APP``` button and specify your project details on the interface to monitor the deployed pod(s).
 - Make sure the sync policy is set to Automatic.
