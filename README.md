@@ -8,7 +8,7 @@
 
 - Experience with Git principles for version control.
 
-- Experience with GitHub to fork and clone the repository.
+- Experience with GitHub to fork, clone or publish a repository.
 
 - Containerization using Docker and a container registry like Docker Hub.
 
