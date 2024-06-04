@@ -22,7 +22,7 @@
 
 ### Our Repo structure is given below:- 
 ```
- DevOps-Assignment
+ Argo-GitOps
  |_ Source
  |  |_ Dockerfile
  |  |_ .dockerignore
@@ -167,6 +167,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - By no chance I am saying their documentation is bad but GitOps intersects so many concepts together, which is not elaborated in the documentation, thus not very beginner-friendly.
 ---
 
-### THANK YOU FOR ASSIGNING THIS PROJECT TO ME, AS I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECTS.
+### THROUGH THIS PROJECT I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECT.
 
-### LOOKING FORWARD TO WORKING WITH YOUR TEAM😊.
+### MAKE SURE TO STAR THIS REPO IF YOU ENJOYED GITOPS😊.
