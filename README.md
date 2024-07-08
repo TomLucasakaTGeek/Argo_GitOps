@@ -8,7 +8,7 @@
 
 - Experience with Git principles for version control.
 
-- Experience with GitHub to fork and clone the repository.
+- Experience with GitHub to fork, clone or publish a repository.
 
 - Containerization using Docker and a container registry like Docker Hub.
 
@@ -22,7 +22,7 @@
 
 ### Our Repo structure is given below:- 
 ```
- DevOps-Assignment
+ Argo-GitOps
  |_ Source
  |  |_ Dockerfile
  |  |_ .dockerignore
@@ -92,16 +92,16 @@
 
 - Login to Argo CD using:-
   ```
-	kubectl get all -n argocd                                        #identfy the port for Argo CD 
+	kubectl get all -n argocd                                        #identify the port for Argo CD 
 	kubectl port-forward service/argocd-server -n argocd 8080:443    #runs the Argo Web GUI on 127.0.0.1:8080
   ```
 - Login Page looks like this:
  ![image](https://www.unixarena.com/wp-content/uploads/2021/07/Argo-CD-Login-Page.jpg)
-- Default username is **"admin"**  and to get the password run the command :
+- Default username is **"admin"**  and to get the password run the following command :
 ```
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password} | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
-- It will open up such an interface
+- It will open up such an interface:
  ![(4-argo-app-created.png (1920×1012) (arthurkoziel.com)](https://www.arthurkoziel.com/setting-up-argocd-with-helm/4-argo-app-created.png)
 - Press ```+ NEW APP``` button and specify your project details on the interface to monitor the deployed pod(s).
 - Make sure the sync policy is set to Automatic.
@@ -149,7 +149,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 	```
 - Delete the Kubernetes Deployment using the following command:
 	```
-	kubectl delete deployment my-deployment
+	kubectl delete deployment {deployment-name}
 	```
 - Delete the Docker Image from the Docker Hub using the Docker Hub UI or the Docker CLI. Please refer to the Docker Hub documentation for the specific steps:- [Overview of Docker Hub | Docker Docs](https://docs.docker.com/docker-hub/).
 
@@ -167,6 +167,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - By no chance I am saying their documentation is bad but GitOps intersects so many concepts together, which is not elaborated in the documentation, thus not very beginner-friendly.
 ---
 
-### THANK YOU FOR ASSIGNING THIS PROJECT TO ME, AS I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECTS.
+### THROUGH THIS PROJECT I GOT TO LEARN A LOT OF THINGS HAPPENING ON THE DEPLOYMENT SIDE OF PROJECTS.
 
-### LOOKING FORWARD TO WORKING WITH YOUR TEAM😊.
+### MAKE SURE TO STAR THIS REPO IF YOU ENJOYED GITOPS😊.
